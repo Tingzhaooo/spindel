@@ -5,4 +5,4 @@ indel-mp:the indel code is based on sp's approach and maxium parsimony, can solu
 
 indel-sp:the indel code is based on sp's approachonly, can solute the problme with small tree only, larger tree takes very long time
 
-Useage of both: commond line:  python indel.py -t path/to/tree -s path/to/alignment
+Useage of both: commond line:  python indel-mp.py/indel-sp.py      -t path/to/tree       -s path/to/alignment
