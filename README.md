@@ -1,8 +1,23 @@
-# sp's indel approach
+# Indel Inference using dynamic programming
 
-indel-mp:the indel code is based on sp's approach and maxium parsimony, can solute the problme with larger tree(CYP2U_165)
+Implementation of indel inference based on Phylogenetic Profiling of Insertions and Deletions in Vertebrate Genomes [[1]](#1).
 
+### Running the method
+```
+python spindel.py -n phylogenetic tree -a alignment file -o output folder
 
-indel-sp:the indel code is based on sp's approachonly, can solute the problme with small tree only, larger tree takes very long time
+arguments:
+  -a  fasta format alignment file
+  -n  ancestors annotated phylogenetic tree in newick format
+  -o  folder location where the output files will be stored
 
-Useage of both: commond line:  python indel-mp.py/indel-sp.py      -t path/to/tree       -s path/to/alignment
+example:
+python spindel.py -a /media/WorkingSpace/Share/indelmip/data/CYP2U_165/CYP2U_165.aln -n  /media/WorkingSpace/Share/indelmip/data/CYP2U_165/CYP2U_annotated_165.nwk -o /media/WorkingSpace/Share/indelmip/data/CYP2U_165/
+
+```
+
+## References
+<a id="1">[1]</a> 
+Snir et. al. and Patcher et. al. (2006). 
+Phylogenetic Profiling of Insertions and Deletions in Vertebrate Genomes. 
+https://link.springer.com/chapter/10.1007/11732990_23
