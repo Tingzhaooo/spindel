@@ -1,6 +1,6 @@
 # Indel Inference using dynamic programming
 
-Implementation of indel inference based on Phylogenetic Profiling of Insertions and Deletions in Vertebrate Genomes [[1]](#1).
+Implementation of indel inference based on paper - Phylogenetic Profiling of Insertions and Deletions in Vertebrate Genomes [[1]](#1).
 
 ### Running the method
 ```
