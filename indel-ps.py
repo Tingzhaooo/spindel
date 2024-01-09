@@ -3,9 +3,6 @@ from collections import defaultdict
 from collections import OrderedDict
 import argparse
 
-tree ='./toy_data/toy_data1/input_tree.nwk'#'./toy_data/CYP2U_165.nwk'
-seqs ='./toy_data/toy_data1/extants.aln'#"./toy_data/CYP2U_165.aln"#
-
 def readFasta(string, ignore = False):
     """ Read the given string as FASTA formatted data and return the list of
         sequences contained within it."""
