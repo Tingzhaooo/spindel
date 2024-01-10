@@ -107,7 +107,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="indel")
 
     parser.add_argument("-a", required=True, help="fasta format alignment file")
-    parser.add_argument("-n", required=True, help="Specify phylogenetic tree input")
+    parser.add_argument("-n", required=True, help="ancestors annotated phylogenetic tree in newick format")
     parser.add_argument("-o", required=True, help="Specify output folder")
     args = parser.parse_args()
 
