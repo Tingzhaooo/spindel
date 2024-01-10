@@ -71,7 +71,7 @@ def IndelHistory(a, T, O):
                 different = abs(sign - brother_v)# different is the difference brtyween sign and its i-1
                 dist += (sign * different) # the distance its the sum of sign * fdifferent
 
-            sign_i = dist
+            sign_i = dist + opt_list[i-1]
             if sign_i < min_opt_i:# compared to find the opt
                 min_opt_i = sign_i
                 min_opt_i_index = j
