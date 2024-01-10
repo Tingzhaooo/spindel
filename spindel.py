@@ -108,7 +108,7 @@ if __name__ == "__main__":
 
     parser.add_argument("-a", required=True, help="fasta format alignment file")
     parser.add_argument("-n", required=True, help="ancestors annotated phylogenetic tree in newick format")
-    parser.add_argument("-o", required=True, help="Specify output folder")
+    parser.add_argument("-o", required=True, help="folder location where the output files will be stored")
     args = parser.parse_args()
 
     main(args)
