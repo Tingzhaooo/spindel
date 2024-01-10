@@ -137,7 +137,8 @@ def remove_identical_adjacent_columns(alignment, aln):
     result_alignment = {list(aln.keys())[index]: ''.join(alignment[index]) for index in range(len(alignment))}
     return removed_columns, result_alignment
 
-def save_data(seq):
-    with open("result.aln", 'w') as file:
+def save_data(o,seq):
+    o_path = f"{o}/result.aln"
+    with open(o_path, 'w') as file:
         for k, v in seq.items():
             file.write(f">{k}\n{v}\n")
