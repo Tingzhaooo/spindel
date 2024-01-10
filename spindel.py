@@ -2,7 +2,7 @@ from collections import OrderedDict
 import argparse
 from utils import get_aln, get_tree_data, remove_identical_adjacent_columns, save_data
 
-def IndelHistory(a, T):
+def IndelHistory(a, T, O):
     """parameter: a, a path of multiple alignment file
     T, a p-ath of tree file
     return a dictionary of indel history"""
@@ -94,20 +94,21 @@ def IndelHistory(a, T):
     all_sequence = {k: v for k, v in zip(ancestor_list, result_history)}  # dict the name and the seq
     all_sequence = OrderedDict((key, all_sequence[key]) for key in order)  # re order the result
     print("whole process is done")
-    return save_data(all_sequence)
+    return save_data(O, all_sequence)
 
 def main(args):
     print("Received the following arguments:")
-    print(f"-s option: {args.s}")
-    print(f"-t option: {args.t}")
-    IndelHistory(args.s, args.t)
+    print(f"-a option: {args.a}")
+    print(f"-n option: {args.n}")
+    print(f"-o option: {args.o}")
+    IndelHistory(args.a, args.n, args.o)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="indel")
 
-    parser.add_argument("-s", required=True, help="Specify seqs input")
-    parser.add_argument("-t", required=True, help="Specify tree input")
-
+    parser.add_argument("-a", required=True, help="Specify alignment file input")
+    parser.add_argument("-n", required=True, help="Specify phylogenetic tree input")
+    parser.add_argument("-o", required=True, help="Specify output folder")
     args = parser.parse_args()
 
     main(args)
